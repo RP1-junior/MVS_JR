@@ -56,13 +56,13 @@ The server will automatically initialize the database on first run. It will:
 
 1. Open `web/public/config/fabric.msf.json`
 2. Find the `namespace` field in the `map` object
-3. Replace `mycompanyname` with your RP1 Developer Center Company ID (in lowercase)
+3. Replace `MY_COMPANY_ID` with your RP1 Developer Center Company ID (in lowercase)
 
 Example:
 ```json
 {
    "map": {
-      "namespace": "yourcompanyname/map",
+      "namespace": "yourcompanyid/map",
       ...
    }
 }

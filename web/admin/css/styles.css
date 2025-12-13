@@ -21,6 +21,12 @@
   }
 }
 
+.bg-none{
+   background:none !important;
+   background-color:none !important;
+   background-image:none !important;
+}
+
 body, .dropdown-item{
   font-family: "Outfit", sans-serif !important;
   font-optical-sizing: auto;

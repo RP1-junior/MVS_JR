@@ -56,8 +56,11 @@
 <body>
 
    <!-- Login Modal -->
-   <div class="vh-100 vw-100 bg-dark bg-opacity-50 blur position-relative z-3 jsLogin" style="display:none;" tabindex="-1">
-      <div class="modal-body text-center d-flex flex-column h-100 justify-content-center align-items-center">
+   <div class="vh-100 vw-100 bg-none bg-opacity-50 blur position-relative z-3 jsLogin" style="display:none;" tabindex="-1">
+
+      <!-- UNDO THIS -->
+
+      <div class="modal-body text-center d-flex flex-column h-100 justify-content-center align-items-center d-none">
          <h1 class="modal-title mb-4 pe-none">Login</h1>
          <div class="jsLogin container">
             <form class="row g-3 justify-content-center align-items-center mb-5" onsubmit="onLogin(event)">

@@ -40,6 +40,37 @@ USE MVD_RP1_Map;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~                                                                                                                            ~~
+~~                                                   MVD_RP1_Map : db_update.sql                                                  ~~
+~~                                                                                                                            ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~                            Copyright (c) 2023-2025 Metaversal Corporation. All rights reserved.                            ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*
+ Create the update table
+*/
+
+CREATE TABLE db_update (
+    id          INT AUTO_INCREMENT PRIMARY KEY,
+    script_name VARCHAR(255) NOT NULL UNIQUE,
+    applied_at  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    checksum    VARCHAR(64) NULL,
+    comment     VARCHAR(255) NULL
+);
+
+
+INSERT INTO db_update (script_name, checksum, comment)
+VALUES
+  ('0000_init_db_update_table.sql', NULL, 'Baseline full build includes 0000'),
+  ('0001_create_admin_table.sql',   NULL, 'Baseline full build includes 0001'),
+  ('0002_update_functions.sql',     NULL, 'Baseline full build includes 0002'),
+  ('0003_update_procedures.sql',    NULL, 'Baseline full build includes 0003'),
+  ('0004_db_fixes.sql',             NULL, 'Baseline full build includes 0004');
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~                                                                                                                            ~~
 ~~                                                   MVD_RP1_Map : Admin.sql                                                  ~~
 ~~                                                                                                                            ~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

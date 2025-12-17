@@ -52,11 +52,14 @@ The server will automatically initialize the database on first run. It will:
 
 ### Update fabric.msf.json
 
-**Important:** Before running the application, you must update the `fabric.msf.json` file located in `web/public/config/`.
+Open and customize `fabric.msf.json.example` as `fabric.msf.json` as described below. The real fabric.msf.json is ignored by Git to avoid future merge conflicts in forks.
 
-1. Open `web/public/config/fabric.msf.json`
+**Important:** Before running the application, you must update the `fabric.msf.json.example` file located in `web/public/config/`.
+
+1. Open `web/public/config/fabric.msf.json.example`
 2. Find the `namespace` field in the `map` object
 3. Replace `MY_COMPANY_ID` with your RP1 Developer Center Company ID (in lowercase)
+3. Save as `fabric.msf.json` in your `web/public/config` directory
 
 Example:
 ```json

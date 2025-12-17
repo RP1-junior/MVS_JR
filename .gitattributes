@@ -1,0 +1,2 @@
+fabric.msf.json merge=ours
+web/public/objects/* merge=ours

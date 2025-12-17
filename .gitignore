@@ -1,4 +1,2 @@
 *.bak
 /.vs
-fabric.msf.json
-web/public/objects/
